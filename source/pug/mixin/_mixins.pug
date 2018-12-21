@@ -1,0 +1,39 @@
+//- I:
+mixins list(data)
+	ul(class!=attributes.class)
+		each item in data 
+			li
+				img(src=item.img)
+				.list-itms!=item.title
+
++list([
+	{img:'', title: ''},
+	{img:'', title: ''},
+	{img:'', title: ''},
+	{img:'', title: ''}
+])(class="list1")
+
+
+//- II:
+
+mixins list(data, className)
+	//- I:
+	if ( className != undefined )
+		ul(class=className)
+	else
+		ul
+	//- II:
+	( className != undefined ) ? ul(class=className) : ul;
+	//- III:
+	ul(class=( className != undefined ) ? className : "")
+		each item in data 
+			li
+				img(src=item.img)
+				.list-itms!=item.title
+
++list([
+	{img:'', title: ''},
+	{img:'', title: ''},
+	{img:'', title: ''},
+	{img:'', title: ''}
+], "list1")

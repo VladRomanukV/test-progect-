@@ -1,0 +1,78 @@
+.header
+	width 100%
+	font-size 0
+	&-logo
+		background #a4c639
+		width 25%
+		color #fff
+		font-family 'ReklameRegular'
+		font-size 41.67px
+		display inline-block
+		text-align center 
+		padding 44px 0
+	&-nav
+		width 75%
+		display inline-block
+		background #3a4246
+		vertical-align top
+		padding 37px 0
+	&-nav__menu
+		display inline-block
+		margin-left 32px
+		margin-right 45px
+		li
+			display inline-block
+			margin-right 32px
+			cursor pointer
+			&:nth-child(2)
+				.list__items
+					position relative
+					&:before
+						content '10'
+						position absolute
+						top -23px
+						right -24px
+						font-size 12px
+						background #64b5f6
+						padding 7px 7px
+						border-radius 50%
+						color #fff
+			img
+				padding-right 10px
+		.list__items
+			font-size 19.47px
+			color #bec1c2
+			font-family RobotoBold
+			display inline-block
+	&-nav__form
+		display inline-block
+		width 29%
+		margin-right 42px
+		position relative
+		&:before  
+			content ' '
+			position absolute
+			width 16px
+			height 16px
+			background url('/img/header_img/serch.png') no-repeat
+			top 20px
+			right 25px
+			z-index 100
+	&-nav__serch
+		width 100%
+		background #50595e
+		border none 
+		padding 15px 20px
+		border-radius 50px
+		font-size 19.44px
+		font-family RobotoLightItalic
+		position relative
+	&-nav__btn
+		text-transform uppercase
+		font-size 19.44px
+		font-family SourceBold
+		padding 15px 22px
+		border-radius 10px
+		background #ff5722
+		color #fff
+		border none

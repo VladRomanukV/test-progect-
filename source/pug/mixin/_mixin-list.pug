@@ -1,0 +1,13 @@
+mixin list(data, className)
+	if ( className != undefined )
+		ul(class=className)
+			each item in data
+				li
+					img(src=item.img)
+					.list__items!=item.title
+	else
+		ul
+			each item in data
+				li
+					img(src=item.img)
+					.list__items!=item.title
