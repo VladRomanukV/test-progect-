@@ -1,0 +1,39 @@
+mixin block-bot(data)
+	.bloc-col__bot
+		each item in data
+			.block-bott
+				if item.class=='block-bott_wrap'
+					.class__.block-bott_wrap
+						.block-bott__wrapper
+							.block-bott__headline!=item.headline
+							.block-bott__text!=item.text
+						.block-bott__account
+							.block-bott__afatar
+								img(src=item.img)
+						.block-bott__wrap
+							.block-bott__name!=item.name
+							.block-bott__position!=item.pos
+				else if item.class=='block-carts'
+					.block-carts
+						.block-carts__wraper
+							.block-carts__img
+								img(src=item.imags)
+							.block-carts__headline!=item.hdline
+							.block-carts__headline-sub!=item.suBhdline
+							.block-carts__text!=item.txt
+							.block-carts__btn!=item.btn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

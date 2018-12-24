@@ -1,5 +1,5 @@
 //- I:
-mixins list(data)
+mixin list(data)
 	ul(class!=attributes.class)
 		each item in data 
 			li
@@ -16,7 +16,7 @@ mixins list(data)
 
 //- II:
 
-mixins list(data, className)
+mixin list(data, className)
 	//- I:
 	if ( className != undefined )
 		ul(class=className)

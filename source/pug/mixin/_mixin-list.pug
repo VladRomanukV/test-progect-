@@ -5,12 +5,20 @@ mixin list(data, className)
 				li
 					img(src=item.img)
 					.list__items!=item.title
+						if span
+							span.span__items!=item.spa
+						else 
+							span!=item.spa
 	else
 		ul
 			each item in data
 				li
 					img(src=item.img)
 					.list__items!=item.title
+						if span
+							span.span__items!=item.spa
+						else 
+							span!=item.spa
 
 mixin block(data)
 	.main-block__wrapp
@@ -22,18 +30,4 @@ mixin block(data)
 				.main-block__content
 					.main-block__buttom!=item.but
 					.main-block__span!=item.sp
-
-mixin block-bot(data)
-	.bloc-col__bot
-		each item in data 
-			.block-bott
-				.block-bott__wrapper
-					.block-bott__headline!=item.headline
-					.block-bott__text!=item.text
-				.block-bott__account
-					.block-bott__afatar
-						img(src=item.img)
-					.block-bott__wrap
-						.block-bott__name!=item.name
-						.block-bott__position!=item.pos
 
